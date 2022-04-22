@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-image: url(https://cdn.wallpapersafari.com/1/80/8DYndB.png);
+        font-family: "Roboto", sans-serif;
+      }
+
+      div {
+        background-color: #daf7c1;
+        width: 320px;
+        margin: 8px;
+        padding: 8px 18px;
+        border-radius: 14px;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      div:hover {
+        box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    </style>
+    <title>Vem de Zap</title>
+  </head>
+
+  <body>
+    <div onclick="mandaZap(this)">
+      <p>Bom dia, luz do dia! 🌻</p>
+      <img
+        src="https://macmagazine.com.br/wp-content/uploads/2014/04/02-whatsapp.png"
+      />
+    </div>
+
+    <div onclick="mandaZap(this)">
+      <p>Vamos marcar sim, a gente vai se falando 👍</p>
+      <img
+        src="https://macmagazine.com.br/wp-content/uploads/2014/04/02-whatsapp.png"
+      />
+    </div>
+
+    <div onclick="mandaZap(this)">
+      <p>O que você quer fazer hoje? Nada? Que tal fazermos nada juntos?</p>
+      <img
+        src="https://macmagazine.com.br/wp-content/uploads/2014/04/02-whatsapp.png"
+      />
+    </div>
+
+    <div onclick="mandaZap(this)">
+      <p>Agora é oficial, eu te amo 😌</p>
+      <img
+        src="https://macmagazine.com.br/wp-content/uploads/2014/04/02-whatsapp.png"
+      />
+    </div>
+
+    <div onclick="mandaZap(this)">
+      <p>Usei o Shampoo antiquedas, mas continuo caidinho por vc</p>
+      <img
+        src="https://macmagazine.com.br/wp-content/uploads/2014/04/02-whatsapp.png"
+      />
+    </div>
+
+    <div onclick="mandaZap(this)">
+      <p>A lingua portuguesa é muito difícil, Eu prefiro a sua</p>
+      <img
+        src="https://macmagazine.com.br/wp-content/uploads/2014/04/02-whatsapp.png"
+      />
+    </div>
+
+    <div onclick="mandaZap(this)">
+      <p>Confimado! Eu estou querendo você e não estou sabendo pedir 😥</p>
+      <img
+        src="https://macmagazine.com.br/wp-content/uploads/2014/04/02-whatsapp.png"
+      />
+    </div>
+
+    <div onclick="mandaZap(this)">
+      <p>Testei positivo! Positivo para apaixonado por você 😏</p>
+      <img
+        src="https://macmagazine.com.br/wp-content/uploads/2014/04/02-whatsapp.png"
+      />
+    </div>
+    <!--
+    <div>
+      <p>Bom dia, luz do dia!</p>
+    </div>
+
+    <div>
+      <p>Bom dia, luz do dia!</p>
+    </div>
+
+    <div>
+      <p>Bom dia, luz do dia!</p>
+    </div>
+
+    <div>
+      <p>Bom dia, luz do dia!</p>
+    </div>
+
+    <div>
+      <p>Bom dia, luz do dia!</p>
+    </div>
+
+    <div>
+      <p>Bom dia, luz do dia!</p>
+    </div>
+
+    <div>
+      <p>Bom dia, luz do dia!</p>
+    </div>
+
+    <div>
+      <p>Bom dia, luz do dia!</p>
+    </div>
+    -->
+  </body>
+
+  <script>
+    function mandaZap(elemento) {
+      let texto = elemento.firstElementChild.innerText;
+      let numero = prompt("Qual é o seu número?");
+      let zapLink = `https://api.whatsapp.com/send?phone=55${numero}&text=${texto}`;
+
+      window.open(zapLink);
+    }
+  </script>
+</html>
